@@ -32,7 +32,6 @@ A **web-based chatbot** that provides empathetic and positive support for emotio
 
 ## 📁 Project Structure
 
-```shell
 $ tree
 chat_web_natural/
 ├─ app.py # Flask backend
@@ -42,7 +41,6 @@ chat_web_natural/
 │ └─ index.html # Frontend chat interface
 ├─ static/
 └─ style.css # Chat styling
-```
 
 ---
 
