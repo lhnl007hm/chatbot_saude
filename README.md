@@ -33,7 +33,7 @@ A **web-based chatbot** that provides empathetic and positive support for emotio
 ## 📁 Project Structure
 
 ```bash
-chat_web_natural/
+chat_saude/
 ├─ app.py # Flask backend
 ├─ memoria_usuario.json # Persistent user memory
 ├─ demo.gif # GIF demonstration of the chat
