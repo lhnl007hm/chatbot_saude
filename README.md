@@ -49,7 +49,7 @@ chat_web_natural/
 
 ```bash
 git clone https://github.com/your-username/chatbot_saude.git
-cd emotional-chatbot
+cd chatbot_saude
 ```
 
 ---
