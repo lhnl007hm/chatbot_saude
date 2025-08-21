@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chat Natural de Apoio</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="chat-container">
+      <div id="chat-box" class="chat-box"></div>
+      <div class="input-area">
+        <input type="text" id="mensagem" placeholder="Digite sua mensagem..." />
+        <button onclick="enviarMensagem()">Enviar</button>
+      </div>
+    </div>
+
+    <script>
+      const mensagemInput = document.getElementById("mensagem");
+
+      // Envia mensagem ao clicar no botão
+      async function enviarMensagem() {
+        const mensagem = mensagemInput.value.trim();
+        if (!mensagem) return;
+
+        adicionarMensagem("Você", mensagem);
+        mensagemInput.value = "";
+
+        const resposta = await fetch("/enviar", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ mensagem }),
+        }).then((res) => res.json());
+
+        adicionarMensagem("Assistente", resposta.resposta);
+      }
+
+      // Envia mensagem ao pressionar Enter
+      mensagemInput.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+          event.preventDefault(); // evita quebra de linha
+          enviarMensagem();
+        }
+      });
+
+      function adicionarMensagem(remetente, texto) {
+        const chatBox = document.getElementById("chat-box");
+        const mensagemDiv = document.createElement("div");
+        mensagemDiv.classList.add(
+          remetente === "Você" ? "mensagem-usuario" : "mensagem-assistente"
+        );
+        mensagemDiv.innerHTML = `<strong>${remetente}:</strong> ${texto}`;
+        chatBox.appendChild(mensagemDiv);
+        chatBox.scrollTop = chatBox.scrollHeight;
+      }
+    </script>
+  </body>
+</html>
