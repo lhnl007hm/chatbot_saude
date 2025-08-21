@@ -4,7 +4,7 @@ import json
 import os
 
 # Configuração da API
-genai.configure(api_key="AIzaSyBrtcJCuoPl5rYM9w_wnWqY9NILAg0sXp4")
+genai.configure(api_key="YOUR_KEY_HERE")
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 app = Flask(__name__)
