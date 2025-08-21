@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quem Somos - 3° DS Clínica</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='apresentacao.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo da Clínica">
+    </div>
+
+    <nav class="nav-links">
+      <a href="/" >Home</a>
+      <a href="/apresentacao" class="active">Quem Somos</a>
+    </nav>
+
+    <div class="botao-consulta">
+      <a href="/chat">Ir para Consulta</a>
+    </div>
+  </header>
+
+<body>
+  <div class="container">
+    <h1>Quem Somos</h1>
+    <p>
+      A <strong>3° DS</strong> é uma clínica de psicologia idealizada pelos alunos da turma. Nosso propósito é criar um ambiente acolhedor e acessível por meio de um <strong>chatbot empático e anônimo</strong>, disponível gratuitamente para qualquer pessoa que precise conversar. Ressaltamos que, apesar do apoio virtual, <strong>o nosso bot não substitui um(a) psicólogo(a) profissional</strong>.
+    </p>
+  </div>
+
+  <section class="footer-integrantes">
+  <h2>Equipe 3° DS</h2>
+  <p>Luca Nogueira (2° DS), Noemy C., Gabriel, Kauan, Tatiely</p>
+</section>
+
+
+    <footer class="footer">
+    <div class="footer-left">
+      <p>Todos os direitos reservados 3° DS Clínica Psiquiátrica ©</p>
+    </div>
+    <div class="footer-right">
+      <p>Desenvolvido por 
+        <a href="https://github.com/lucanogueirasouza" target="_blank" rel="noopener noreferrer">Luca Nogueira</a>, 
+        <a href="https://github.com/lhnl007hm/" target="_blank" rel="noopener noreferrer">Luiz H.</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

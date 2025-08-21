@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>3° DS Clínica</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}" type="image/png" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo da Clínica">
+    </div>
+
+    <nav class="nav-links">
+      <a href="/" class="active">Home</a>
+      <a href="/apresentacao">Quem Somos</a>
+    </nav>
+
+    <div class="botao-consulta">
+      <a href="/chat">Ir para Consulta</a>
+    </div>
+  </header>
+
+  <section class="atendimento-section">
+  <div class="overlay">
+    <div class="container-texto">
+      <div class="online-text">Atendimento: Online</div>
+      <div class="logo-psicologia">Ψ</div>
+      <h2>CLÍNICA DE PSICOLOGIA 3° DS</h2>
+      <p>
+        A 3° DS é uma clínica de psicologia fundada pelos alunos da mesma, <strong>nosso intuito e missão é fazer um chat-bot focado em psicologia onde você pode acessa-lo e "desabafar" anonimamente e de forma gratuita</strong>, podendo ser utilizado por qualquer tipo de pessoa, vale lembrar, que <strong>o nosso bot, não substitui um(a) psicologo(a) profissional.</strong>
+      </p>
+    </div>
+
+    <div class="botao-saiba-mais-container">
+  <button class="botao-saiba-mais" onclick="window.location.href='/apresentacao'">Saiba Mais</button>
+    </div>
+
+  </div>
+</section>
+
+  <footer class="footer">
+    <div class="footer-left">
+      <p>Todos os direitos reservados 3° DS Clínica Psiquiátrica ©</p>
+    </div>
+    <div class="footer-right">
+      <p>Desenvolvido por 
+        <a href="https://github.com/lucanogueirasouza" target="_blank" rel="noopener noreferrer">Luca Nogueira</a>, 
+        <a href="https://github.com/lhnl007hm/" target="_blank" rel="noopener noreferrer">Luiz H.</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

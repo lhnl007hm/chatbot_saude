@@ -1,0 +1,182 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #7b15a7; /* mesmo fundo do footer */
+}
+
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  background-color: #ecbfec;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  height: 80px; /* um pouco maior pra dar espaço */
+  overflow: visible;
+}
+
+.logo img {
+  height: 130px; /* maior que a navbar */
+  width: auto;
+  position: relative;
+  top: -10px; /* só um pouco para cima */
+}
+
+.nav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding-bottom: 5px;
+  position: relative;
+  transition: color 0.3s;
+  font-size: 16px;
+  line-height: 80px; /* centraliza verticalmente os links */
+}
+
+.nav-links a:hover {
+  color: #6c2c87;
+}
+
+.nav-links a.active {
+  color: #6c2c87; /* Roxo */
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #6c2c87;
+  border-radius: 2px;
+}
+
+.botao-consulta a {
+  background-color: #6c2c87;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.botao-consulta a:hover {
+  background-color: #5b2371;
+}
+
+.atendimento-section {
+  background-color: #6c2c87; /* Roxo escuro */
+  color: white;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  font-family: 'Georgia', serif;
+  min-height: 400px;
+}
+
+.atendimento-section .overlay {
+  background: rgba(108, 44, 135, 0.9); /* fundo semi-transparente roxo */
+  padding: 40px 60px;
+  max-width: 900px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+
+.container-texto .online-text {
+  font-size: 20px;
+  letter-spacing: 5px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  opacity: 0.8;
+}
+
+.logo-psicologia {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.container-texto h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.container-texto p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.container-texto strong {
+  font-weight: 700;
+}
+
+.botao-saiba-mais-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.botao-saiba-mais {
+  background-color: #8a38c8; /* Roxo vibrante */
+  color: white;
+  padding: 15px 45px;
+  border: none;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(138, 56, 200, 0.6);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.botao-saiba-mais:hover {
+  background-color: #6c2c87; /* Roxo mais escuro no hover */
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(108, 44, 135, 0.8);
+}
+
+.footer {
+  background-color: #7b15a7; /* Roxo escuro combinando */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  flex-wrap: wrap;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+}
+
+.footer a {
+  color: #e0c3ff; /* um roxo mais claro para links */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-left,
+.footer-right {
+  margin: 5px 0;
+}
+
+/* Para telas menores */
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
