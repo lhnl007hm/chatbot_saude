@@ -123,9 +123,3 @@ This chatbot does not replace professional mental health care.
 It provides emotional support and positive suggestions. In case of emergencies, always contact a qualified professional immediately.
 
 ---
-
-## 🏷 GitHub Topics / Tags
-
-#Python #Flask #Chatbot #AI #EmotionalSupport #MentalHealth #WebApp #GoogleGenerativeAI
-
----
